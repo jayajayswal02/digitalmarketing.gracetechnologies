@@ -22,13 +22,7 @@ export const contactFormSchema = z.object({
       message: 'Please provide a valid phone number',
     })
     .max(25, { message: 'Phone number is too long' }),
-  service: z.enum([
-    'Website Development',
-    'Merchant Account Management',
-    'AI Automation',
-    'Digital Marketing',
-    'Other',
-  ], {
+  service: z.enum(['Digital Marketing', 'Other'], {
     message: 'Please select a valid service',
   }),
   country: z.string().trim().optional(),

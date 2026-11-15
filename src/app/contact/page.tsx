@@ -10,27 +10,33 @@ import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import JsonLd from '@/components/seo/JsonLd';
 import { constructMetadata } from '@/lib/seo/metadata';
-import { getBreadcrumbSchema } from '@/lib/seo/schema';
+import { getBreadcrumbSchema, getWebPageSchema } from '@/lib/seo/schema';
 import { SEO_CONFIG } from '@/lib/seo/config';
 import officesData from '@/config/offices.json';
 import styles from './contact.module.css';
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Contact Grace Technologies | Discuss Your Project',
+  title: 'Contact Grace Technologies | Digital Marketing UK',
+  titleIsAbsolute: true,
   description:
-    'Discuss your goals with Grace Technologies in the UK: website development, merchant account management, AI automation and digital marketing for your business.',
+    'Contact Grace Technologies to discuss digital marketing solutions for your business and explore opportunities to grow your online presence.',
   canonicalPath: '/contact',
   keywords: [
-    'Contact technology company UK',
+    'Contact digital marketing agency UK',
     'Grace Technologies contact',
-    'Website development consultation',
-    'AI automation enquiry',
-    'Digital solutions consultation UK',
+    'Digital marketing consultation UK',
+    'SEO services UK',
   ],
 });
 
 export default function ContactPage() {
   const { uk, india } = officesData.offices;
+  const webPageSchema = getWebPageSchema({
+    name: 'Contact Grace Technologies | Digital Marketing UK',
+    description:
+      'Contact Grace Technologies to discuss digital marketing solutions for your business and explore opportunities to grow your online presence.',
+    url: `${SEO_CONFIG.siteUrl}/contact`,
+  });
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'Home', url: SEO_CONFIG.siteUrl },
     { name: 'Contact Us', url: `${SEO_CONFIG.siteUrl}/contact` },
@@ -38,7 +44,7 @@ export default function ContactPage() {
 
   return (
     <div className={styles.page}>
-      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={[webPageSchema, breadcrumbSchema]} />
       <Breadcrumb
         items={[{ label: 'Contact Us' }]}
         backHref="/"
@@ -50,10 +56,10 @@ export default function ContactPage() {
           <div className={styles.layout}>
             {/* Left Column: Context, Trust, Offices */}
             <div className={styles.infoCol}>
-              <span className={styles.badge}>EXECUTIVE CONSULTATION</span>
-              <h1 className={styles.heading}>Your Next Move Starts With a Conversation.</h1>
+              <span className={styles.badge}>DIGITAL MARKETING ENQUIRIES</span>
+              <h1 className={styles.heading}>Let&apos;s Discuss Your Digital Marketing Goals.</h1>
               <p className={styles.subheading}>
-                Start your next move with a conversation with our UK team about website development, merchant account management, AI automation or digital marketing.
+                Start a conversation with our UK team about digital marketing, your audience and your business goals.
               </p>
 
               {/* UK Office Card */}
@@ -103,11 +109,11 @@ export default function ContactPage() {
               <div className={styles.trustStrip}>
                 <div className={styles.trustItem}>
                   <SecurityOutlinedIcon className={styles.trustIcon} />
-                  <span>Strict NDA and commercial privacy maintained</span>
+                  <span>Enquiries are handled in line with our privacy policy.</span>
                 </div>
                 <div className={styles.trustItem}>
                   <EmailOutlinedIcon className={styles.trustIcon} />
-                  <span>Response from senior leadership within 24 business hours</span>
+                  <span>We review your enquiry and discuss suitable next steps.</span>
                 </div>
               </div>
             </div>

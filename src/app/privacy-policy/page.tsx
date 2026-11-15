@@ -49,14 +49,14 @@ export default function PrivacyPolicyPage() {
           <section className={styles.legalSection}>
             <h2>3. Cross-Border Collaboration and Data Processing</h2>
             <p>
-              In our strategic partnership with Ank Square Private Limited (India), technical and project execution data may be accessed by engineering teams for the purposes of development, testing, and system delivery. All cross-border data transfers are governed by strict International Data Transfer Agreements (IDTAs) and standard contractual clauses guaranteeing confidentiality and security.
+              Where Grace Technologies works with Ank Square Private Limited in India, relevant personal data may be shared only when needed to provide agreed services and in accordance with applicable data protection requirements and the terms set out in the relevant agreements.
             </p>
           </section>
 
           <section className={styles.legalSection}>
-            <h2>4. AI and Confidentiality Safeguards</h2>
+            <h2>4. Confidentiality and Data Use</h2>
             <p>
-              We adhere to strict zero-data-retention agreements when configuring AI automation solutions. Client proprietary datasets, internal documents, and enterprise knowledge bases are never utilized to train public machine learning models.
+              We use personal information only for the purposes explained in this policy and do not use client information to train public machine learning models.
             </p>
           </section>
 

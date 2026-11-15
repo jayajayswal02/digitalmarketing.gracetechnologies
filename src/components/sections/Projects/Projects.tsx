@@ -5,7 +5,6 @@ import Container from '@/components/common/Container/Container';
 import ProjectsHeader from './ProjectsHeader';
 import ProjectFilters, { CategoryFilter } from './ProjectFilters';
 import ProjectCarousel from './ProjectCarousel';
-import ProjectStats from './ProjectStats';
 import { PROJECTS_DATA, ProjectItem } from '@/data/projects';
 import styles from './Projects.module.css';
 
@@ -32,9 +31,9 @@ export default function Projects({ initialProjects = PROJECTS_DATA }: ProjectsPr
         {/* Editorial Section Header matching reference image */}
         <ProjectsHeader
           label="OUR PROJECTS"
-          title="Ideas Into Real"
-          highlightText="Digital Solutions"
-          description="Explore some of the solutions we have delivered across web development, payment systems, AI automation and digital marketing for businesses around the world."
+          title="Selected Client"
+          highlightText="Projects"
+          description="Explore selected work and collaborations with businesses in the UK and beyond."
           viewAllHref="/projects"
         />
 
@@ -47,10 +46,7 @@ export default function Projects({ initialProjects = PROJECTS_DATA }: ProjectsPr
         {/* 4-Card Responsive Carousel Showcase */}
         <ProjectCarousel projects={filteredProjects} />
 
-        {/* Bottom Refined Information Strip */}
-        {/* <ProjectStats /> */}
       </Container>
     </section>
   );
 }
-

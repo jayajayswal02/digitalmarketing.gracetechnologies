@@ -5,9 +5,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import VerifiedIcon from '@mui/icons-material/Verified';
-import SyncAltIcon from '@mui/icons-material/SyncAlt';
-import TerminalIcon from '@mui/icons-material/Terminal';
-import SpeedIcon from '@mui/icons-material/Speed';
+import CampaignIcon from '@mui/icons-material/Campaign';
+import HubIcon from '@mui/icons-material/Hub';
 import { UkFlag, IndiaFlag } from '@/components/common/Flags/CountryFlags';
 import Logo from '../../../../public/logo/logo.png';
 import styles from './PartnershipHeroVisual.module.css';
@@ -61,11 +60,11 @@ export default function PartnershipHeroVisual() {
               />
             </div>
 
-            <span className={styles.nodeRole}>Strategic Leadership & Client Governance</span>
+            <span className={styles.nodeRole}>UK-Based Client Communication</span>
 
             <div className={styles.nodeTags}>
-              <span className={styles.tagPill}>UK Governance</span>
-              <span className={styles.tagPill}>High-Level Scoping</span>
+              <span className={styles.tagPill}>Business Goals</span>
+              <span className={styles.tagPill}>Marketing Strategy</span>
             </div>
           </motion.div>
 
@@ -87,7 +86,7 @@ export default function PartnershipHeroVisual() {
             </div>
           </div>
 
-          {/* Node 2: India Engineering Entity */}
+          {/* Node 2: India Partnership */}
           <motion.div
             className={`${styles.entityNode} ${styles.inNode}`}
             whileHover={{ y: -3 }}
@@ -110,11 +109,11 @@ export default function PartnershipHeroVisual() {
               />
             </div>
 
-            <span className={styles.nodeRole}>Engineering Delivery & AI Technology</span>
+            <span className={styles.nodeRole}>Campaign and Content Support</span>
 
             <div className={styles.nodeTags}>
-              <span className={styles.tagPill}>Next.js 16 / React 19</span>
-              <span className={styles.tagPill}>AI Agents & Workflows</span>
+              <span className={styles.tagPill}>Content & Campaigns</span>
+              <span className={styles.tagPill}>Search & Social</span>
             </div>
           </motion.div>
         </div>
@@ -127,7 +126,7 @@ export default function PartnershipHeroVisual() {
             </div>
             <div>
               <span className={styles.telemetryVal}>Independent</span>
-              <span className={styles.telemetryDesc}>Bilateral Agreement</span>
+              <span className={styles.telemetryDesc}>Separate Legal Entities</span>
             </div>
           </div>
 
@@ -135,11 +134,11 @@ export default function PartnershipHeroVisual() {
 
           <div className={styles.telemetryItem}>
             <div className={styles.telemetryIcon}>
-              <SpeedIcon fontSize="inherit" />
+              <CampaignIcon fontSize="inherit" />
             </div>
             <div>
-              <span className={styles.telemetryVal}>Overlapping</span>
-              <span className={styles.telemetryDesc}>Continuous Sprints</span>
+              <span className={styles.telemetryVal}>Agreed</span>
+              <span className={styles.telemetryDesc}>Marketing Activity</span>
             </div>
           </div>
 
@@ -147,11 +146,11 @@ export default function PartnershipHeroVisual() {
 
           <div className={styles.telemetryItem}>
             <div className={styles.telemetryIcon}>
-              <TerminalIcon fontSize="inherit" />
+              <HubIcon fontSize="inherit" />
             </div>
             <div>
-              <span className={styles.telemetryVal}>TypeScript</span>
-              <span className={styles.telemetryDesc}>Strict Architecture</span>
+              <span className={styles.telemetryVal}>Connected</span>
+              <span className={styles.telemetryDesc}>Channel Coordination</span>
             </div>
           </div>
         </div>

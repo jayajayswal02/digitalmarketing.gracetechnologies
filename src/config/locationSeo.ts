@@ -13,7 +13,7 @@ export interface LocationSEOConfig {
   citySlug: string; // e.g. "london", "manchester"
   stateSlug: string; // e.g. "greater-london"
   countrySlug: string; // e.g. "england"
-  serviceSlug: string; // e.g. "website-development"
+  serviceSlug: string; // e.g. "digital-marketing"
   published: boolean;
   indexable: boolean;
   priority?: number;
@@ -52,27 +52,30 @@ export const APPROVED_LOCATION_HUBS = [
   { city: 'Bangor', state: 'Ards and North Down', country: 'Northern Ireland' },
 ];
 
-import { normalizeSegment } from '@/data/cities';
-
 export interface LocationStatus {
   isPublished: boolean;
   isIndexable: boolean;
 }
 
 /**
- * Determines whether a service-city route is published and indexable.
- *
- * All cities in cities.ts across England, Scotland, Wales, and Northern Ireland
- * are published and indexable.
+ * Keep valid city routes available, but only index the locations selected for
+ * the current location SEO plan.
  */
 export function getLocationStatus(
-  serviceSlug: string,
-  citySlug: string,
-  stateSlug: string,
-  countrySlug: string
+  city: string,
+  state: string,
+  country: string,
+  serviceSlug: string
 ): LocationStatus {
   return {
     isPublished: true,
-    isIndexable: true,
+    isIndexable:
+      serviceSlug === 'digital-marketing' &&
+      APPROVED_LOCATION_HUBS.some(
+        (location) =>
+          location.city === city &&
+          location.state === state &&
+          location.country === country
+      ),
   };
 }

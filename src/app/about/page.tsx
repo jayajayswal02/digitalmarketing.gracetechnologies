@@ -8,25 +8,31 @@ import AboutHeroVisual from '@/components/sections/AboutHeroVisual/AboutHeroVisu
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import JsonLd from '@/components/seo/JsonLd';
 import { constructMetadata } from '@/lib/seo/metadata';
-import { getBreadcrumbSchema } from '@/lib/seo/schema';
+import { getBreadcrumbSchema, getWebPageSchema } from '@/lib/seo/schema';
 import { SEO_CONFIG } from '@/lib/seo/config';
 import styles from './about.module.css';
 
 export const metadata: Metadata = constructMetadata({
-  title: 'About Grace Technologies | Our Expertise & Approach',
+  title: 'About Grace Technologies | Digital Marketing Company UK',
+  titleIsAbsolute: true,
   description:
-    'About Grace Technologies: our UK team works with Ank Square in India on websites, merchant accounts, AI automation and digital marketing for business growth.',
+    'Learn how Grace Technologies helps UK businesses improve online visibility and connect with relevant audiences through strategic digital marketing.',
   canonicalPath: '/about',
   keywords: [
-    'UK technology company',
-    'Technology solutions company',
-    'UK technology partner',
-    'Digital engineering services',
-    'UK India technology partnership',
+    'Grace Technologies',
+    'Digital Marketing Agency UK',
+    'Digital Marketing Company UK',
+    'UK digital marketing services',
   ],
 });
 
 export default function AboutPage() {
+  const webPageSchema = getWebPageSchema({
+    name: 'About Grace Technologies | Digital Marketing Company UK',
+    description:
+      'Learn how Grace Technologies helps UK businesses improve online visibility and connect with relevant audiences through strategic digital marketing.',
+    url: `${SEO_CONFIG.siteUrl}/about`,
+  });
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'Home', url: SEO_CONFIG.siteUrl },
     { name: 'About Us', url: `${SEO_CONFIG.siteUrl}/about` },
@@ -34,7 +40,7 @@ export default function AboutPage() {
 
   return (
     <div className={styles.page}>
-      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={[webPageSchema, breadcrumbSchema]} />
       <Breadcrumb
         items={[{ label: 'About Us' }]}
         backHref="/"
@@ -49,10 +55,10 @@ export default function AboutPage() {
             <div className={styles.heroContent}>
               <span className={styles.badge}>ABOUT GRACE TECHNOLOGIES</span>
               <h1 className={styles.heroTitle}>
-                Combining British Corporate Elegance With Global Technology Prowess.
+                Combining UK Business Insight With Strategic Digital Marketing.
               </h1>
               <p className={styles.heroSubtitle}>
-                Grace Technologies combines British corporate elegance with global technology prowess, partnering with Ank Square in India to deliver website development, merchant account management, AI automation and digital marketing.
+                Grace Technologies helps UK businesses reach relevant audiences and build a stronger online presence through digital marketing, working with Ank Square in India as our strategic partner.
               </p>
             </div>
 
@@ -70,14 +76,14 @@ export default function AboutPage() {
           <div className={styles.storyGrid}>
             <div className={styles.storyLeft}>
               <span className={styles.subBadge}>OUR STORY</span>
-              <h2 className={styles.storyHeading}>Born to Bridge Vision and Execution.</h2>
+              <h2 className={styles.storyHeading}>Built Around Clear Strategy and Collaboration.</h2>
             </div>
             <div className={styles.storyRight}>
               <p className={styles.storyText}>
-                Modern businesses frequently face a persistent dilemma: traditional corporate consultancies often lack deep hands-on technical execution, while pure engineering shops frequently lack business acumen and executive empathy.
+                Businesses need marketing that reflects their commercial priorities, speaks clearly to customers and can be reviewed using meaningful information.
               </p>
               <p className={styles.storyText}>
-                Grace Technologies was founded in the United Kingdom to resolve this divide. By coupling our British commercial leadership with the technical depth and engineering velocity of Ank Square Private Limited in India, we deliver an integrated partnership model that gives our clients both strategic governance and deep development capability.
+                Grace Technologies was founded in the United Kingdom to help businesses address that need. Our UK presence and partnership with Ank Square Private Limited in India support collaborative digital marketing work shaped around each client&apos;s goals.
               </p>
             </div>
           </div>
@@ -90,17 +96,17 @@ export default function AboutPage() {
           <div className={styles.mvGrid}>
             <div className={styles.mvCard}>
               <span className={styles.mvTag}>OUR MISSION</span>
-              <h3 className={styles.mvTitle}>Empowering Commercial Ambition Through Intelligent Systems.</h3>
+              <h3 className={styles.mvTitle}>Supporting Business Growth Through Relevant Marketing.</h3>
               <p className={styles.mvDesc}>
-                To engineer bespoke, reliable, and scalable digital solutions that streamline operations, elevate brand authority, and unlock compounding commercial opportunities for the enterprises we serve.
+                To help businesses communicate clearly, improve their online visibility and connect with relevant audiences through considered digital marketing.
               </p>
             </div>
 
             <div className={styles.mvCard}>
               <span className={styles.mvTag}>OUR VISION</span>
-              <h3 className={styles.mvTitle}>The Benchmark for Cross-Border Technology Collaboration.</h3>
+              <h3 className={styles.mvTitle}>A Trusted Partner for Digital Marketing.</h3>
               <p className={styles.mvDesc}>
-                To set the global standard for international corporate technology delivery, demonstrating how bilateral strategic partnerships between the UK and India can create unparalleled client value.
+                To build a trusted digital marketing partnership that gives clients clear communication, thoughtful strategy and consistent support.
               </p>
             </div>
           </div>
@@ -113,7 +119,7 @@ export default function AboutPage() {
           <SectionHeading
             label="GUIDING PRINCIPLES"
             title="Our Core Values."
-            description="The uncompromising principles that dictate every architectural decision, client communication, and delivery milestone."
+            description="The principles that guide our marketing work, client communication and recommendations."
             align="left"
           />
 
@@ -121,25 +127,25 @@ export default function AboutPage() {
             <div className={styles.valueCard}>
               <span className={styles.valueNum}>01</span>
               <h3 className={styles.valHeader}>Integrity & Candour</h3>
-              <p className={styles.valP}>We speak plainly about technical feasibility, timelines, and commercial realities. We never over-promise or sell unnecessary complexity.</p>
+              <p className={styles.valP}>We speak plainly about marketing scope, timelines, and commercial realities. We never over-promise or sell unnecessary complexity.</p>
             </div>
 
             <div className={styles.valueCard}>
               <span className={styles.valueNum}>02</span>
-              <h3 className={styles.valHeader}>Engineering Rigour</h3>
-              <p className={styles.valP}>Every line of code, database schema, and automated pipeline is built to strict architectural standards, ensuring durability and future-proofing.</p>
+              <h3 className={styles.valHeader}>Thoughtful Marketing</h3>
+              <p className={styles.valP}>We ground recommendations in your audience, business goals and the available evidence.</p>
             </div>
 
             <div className={styles.valueCard}>
               <span className={styles.valueNum}>03</span>
               <h3 className={styles.valHeader}>Business-First Thinking</h3>
-              <p className={styles.valP}>Technology is a vehicle for commercial value. We measure our achievements by revenue created, hours automated, and business friction removed.</p>
+              <p className={styles.valP}>We focus on relevant activity and useful reporting rather than unsupported promises or vanity metrics.</p>
             </div>
 
             <div className={styles.valueCard}>
               <span className={styles.valueNum}>04</span>
               <h3 className={styles.valHeader}>Global Collaboration</h3>
-              <p className={styles.valP}>We champion bilateral synergy, combining British strategic planning with India&apos;s world-renowned technological talent and execution speed.</p>
+              <p className={styles.valP}>We support collaborative marketing delivery, bringing together UK business planning and our partner&apos;s work in India.</p>
             </div>
           </div>
         </Container>
@@ -150,10 +156,10 @@ export default function AboutPage() {
         <Container size="wide">
           <div className={styles.whyBox}>
             <div className={styles.whyContent}>
-              <span className={styles.subBadge}>PROVEN METHOD</span>
+              <span className={styles.subBadge}>OUR APPROACH</span>
               <h2 className={styles.whyTitle}>Why Forward-Thinking Leaders Choose Grace Technologies.</h2>
               <p className={styles.whyLead}>
-                Our clients enjoy direct access to senior UK strategists coupled with the round-the-clock technical depth of a full engineering team in India. There are no communication barriers, no opaque layers of middlemen, and no compromise on quality.
+                Our UK-based team works collaboratively with Ank Square in India to support clear communication, considered digital marketing strategy and consistent delivery.
               </p>
               <div className={styles.whyActions}>
                 <Button href="/contact" variant="primary" size="lg" icon>
@@ -169,9 +175,9 @@ export default function AboutPage() {
       </section>
 
       <CTASection
-        title="Discover What We Can Build Together."
-        description="Let's discuss your current operational bottlenecks and technical goals with our UK consulting team."
-        primaryCtaText="Speak With Our Team"
+        title="Let's Discuss Your Marketing Goals."
+        description="Tell us about your audience, priorities and current marketing activity."
+        primaryCtaText="Get a Quote"
         primaryCtaHref="/contact"
       />
     </div>

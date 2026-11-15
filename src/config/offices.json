@@ -3,10 +3,10 @@
     "uk": {
       "company": "Grace Technologies",
       "country": "United Kingdom",
-      "tag": "GLOBAL HEADQUARTERS",
-      "role": "Commercial Strategy & Strategic Advisory Lead",
-      "website": "https://gracetechnologies.uk",
-      "websiteDisplay": "www.gracetechnologies.uk",
+      "tag": "UK BUSINESS OFFICE",
+      "role": "Digital Marketing Strategy & Client Support",
+      "website": "https://digitalmarketing.gracetechnologies.uk/",
+      "websiteDisplay": "digitalmarketing.gracetechnologies.uk",
       "addressLines": [
         "398 Whalebone Lane South",
         "Romford, Greater London",
@@ -25,8 +25,8 @@
     "india": {
       "company": "Ank Square Pvt. Ltd.",
       "country": "India",
-      "tag": "STRATEGIC TECHNOLOGY PARTNER",
-      "role": "Strategic Technology & Implementation Partner",
+      "tag": "DIGITAL MARKETING PARTNER",
+      "role": "Campaign and Content Support Partner",
       "website": "https://anksquare.com",
       "websiteDisplay": "www.anksquare.com",
       "addressLines": [

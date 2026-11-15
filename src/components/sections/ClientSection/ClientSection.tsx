@@ -3,7 +3,6 @@
 import React from 'react';
 import Container from '@/components/common/Container/Container';
 import ProjectsHeader from '@/components/sections/Projects/ProjectsHeader';
-import ProjectStats from '@/components/sections/Projects/ProjectStats';
 import ClientCarousel from './ClientCarousel';
 import clientsData from '@/config/clients.json';
 import { ClientItem } from './ClientCard';
@@ -48,7 +47,6 @@ export default function ClientSection({
         <ClientCarousel clients={clients} />
 
         {/* Bottom Refined Information Strip */}
-        {/* <ProjectStats /> */}
       </Container>
     </section>
   );

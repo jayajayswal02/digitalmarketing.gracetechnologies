@@ -5,49 +5,35 @@ import { motion } from 'framer-motion';
 import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-import MemoryIcon from '@mui/icons-material/Memory';
 import HubIcon from '@mui/icons-material/Hub';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import ViewQuiltIcon from '@mui/icons-material/ViewQuilt';
-import PublicIcon from '@mui/icons-material/Public';
+import CampaignIcon from '@mui/icons-material/Campaign';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import styles from './WhyChooseUs.module.css';
 
 const strengths = [
   {
     icon: BusinessCenterIcon,
     number: '01',
-    title: 'Business-Focused Solutions',
-    description: 'We prioritize commercial objectives, operational efficiency, and tangible ROI rather than technology for its own sake.',
-  },
-  {
-    icon: MemoryIcon,
-    number: '02',
-    title: 'Modern Technology',
-    description: 'Built on Next.js, TypeScript, cloud microservices, and leading enterprise AI frameworks with zero technical debt.',
+    title: 'Audience-Led Strategy',
+    description: 'We start with your business goals, audience and current activity to set practical marketing priorities.',
   },
   {
     icon: HubIcon,
+    number: '02',
+    title: 'Connected Channels',
+    description: 'Coordinate search, social, content, email and paid activity around a consistent message.',
+  },
+  {
+    icon: CampaignIcon,
     number: '03',
-    title: 'Scalable Systems',
-    description: 'Architectures engineered to expand smoothly from early adoption to high-load international transaction volumes.',
+    title: 'Clear Delivery',
+    description: 'Agree scope, responsibilities and priorities before carrying out the planned marketing activity.',
   },
   {
-    icon: PsychologyIcon,
+    icon: QueryStatsIcon,
     number: '04',
-    title: 'Intelligent Automation',
-    description: 'Practical automation that orchestrates multi-system processes, removes repetitive manual toil, and elevates accuracy.',
-  },
-  {
-    icon: ViewQuiltIcon,
-    number: '05',
-    title: 'Integrated Digital Capabilities',
-    description: 'Unified cross-functional capability covering web engineering, payment operations, data automation, and digital reach.',
-  },
-  {
-    icon: PublicIcon,
-    number: '06',
-    title: 'International Collaboration',
-    description: 'Bilateral excellence combining British corporate advisory and relationship management with Indian engineering prowess.',
+    title: 'Evidence-Informed Review',
+    description: 'Use available campaign data to understand activity and agree what to review or adjust next.',
   },
 ];
 
@@ -58,8 +44,8 @@ export default function WhyChooseUs() {
         <SectionHeading
           label="THE GRACE ADVANTAGE"
           title="Why Choose Grace Technologies"
-          description="We bridge the gap between high-level business strategy and rigorous engineering execution."
-          align="left"
+          description="We help businesses plan, deliver and review digital marketing activity around their goals."
+          align="center"
         />
 
         <div className={styles.editorialGrid}>

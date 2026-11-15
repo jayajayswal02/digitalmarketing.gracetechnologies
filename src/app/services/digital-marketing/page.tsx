@@ -5,38 +5,69 @@ import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceDetailHero from '@/components/sections/ServiceDetailHero/ServiceDetailHero';
 import FaqAccordion from '@/components/sections/FaqAccordion/FaqAccordion';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
+import WhyChooseUs from '@/components/sections/WhyChooseUs/WhyChooseUs';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import JsonLd from '@/components/seo/JsonLd';
 import { constructMetadata } from '@/lib/seo/metadata';
-import { getServiceSchema, getBreadcrumbSchema, getFaqSchema } from '@/lib/seo/schema';
+import { getServiceSchema, getBreadcrumbSchema, getFaqSchema, getWebPageSchema } from '@/lib/seo/schema';
 import { SEO_CONFIG } from '@/lib/seo/config';
 import { SERVICES_DATA } from '@/config/site';
+import SearchIcon from '@mui/icons-material/Search';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
+import ShareIcon from '@mui/icons-material/Share';
+import AdsClickIcon from '@mui/icons-material/AdsClick';
+import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import styles from '../service-page.module.css';
 
-const service = SERVICES_DATA[3]; // Digital Marketing
+const service = SERVICES_DATA[0];
+const capabilityIcons = [
+  SearchIcon,
+  AutoAwesomeIcon,
+  QuestionAnswerIcon,
+  ShareIcon,
+  AdsClickIcon,
+  ArticleOutlinedIcon,
+  EmailOutlinedIcon,
+  PersonAddAlt1Icon,
+  QueryStatsIcon,
+];
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Digital Marketing & SEO Services UK',
+  title: 'Digital Marketing Agency UK | Grace Technologies',
+  titleIsAbsolute: true,
   description:
-    'Grow your UK audience with digital marketing from Grace Technologies, including SEO, content strategy, paid campaigns and conversion optimisation.',
+    'Explore digital marketing solutions from Grace Technologies, including SEO, GEO, AEO, social media marketing, paid advertising and lead generation.',
   canonicalPath: '/services/digital-marketing',
   keywords: [
-    'Digital marketing agency UK',
-    'SEO services UK',
-    'Search engine optimisation',
-    'Digital marketing for SMEs',
-    'Organic growth strategy',
-    'Online brand visibility',
+    'Digital Marketing Agency UK',
+    'Digital Marketing Services UK',
+    'Digital Marketing Company UK',
+    'Online Marketing Agency UK',
+    'Digital Marketing Solutions UK',
+    'SEO Services UK',
+    'Search Engine Optimisation',
+    'Generative Engine Optimisation',
+    'Answer Engine Optimisation',
+    'Social Media Marketing UK',
+    'Google Ads Management',
+    'Paid Advertising Services',
+    'Content Marketing Services',
+    'Email Marketing Services',
+    'Lead Generation Services',
+    'Digital Marketing Strategy',
   ],
 });
 
 export default function DigitalMarketingPage() {
   const serviceSchema = getServiceSchema({
-    name: 'Digital Marketing & Search Engine Optimisation Services',
-    description:
-      'Omnichannel search engine optimisation, Generative Engine Optimisation (GEO), content strategy, paid acquisition, and conversion rate optimisation.',
+    name: 'Digital Marketing',
+    description: service.description,
     url: `${SEO_CONFIG.siteUrl}/services/digital-marketing`,
-    serviceType: 'Digital Marketing & SEO',
+    serviceType: 'Digital Marketing',
   });
 
   const breadcrumbSchema = getBreadcrumbSchema([
@@ -48,10 +79,16 @@ export default function DigitalMarketingPage() {
   const faqSchema = getFaqSchema(
     service.faqs ? service.faqs.map((f) => ({ question: f.question, answer: f.answer })) : []
   );
+  const webPageSchema = getWebPageSchema({
+    name: 'Digital Marketing Agency UK | Grace Technologies',
+    description:
+      'Explore digital marketing solutions from Grace Technologies, including SEO, GEO, AEO, social media marketing, paid advertising and lead generation.',
+    url: `${SEO_CONFIG.siteUrl}/services/digital-marketing`,
+  });
 
   return (
     <div className={styles.page}>
-      <JsonLd data={[serviceSchema, breadcrumbSchema, faqSchema]} />
+      <JsonLd data={[webPageSchema, serviceSchema, breadcrumbSchema, faqSchema]} />
       <Breadcrumb
         items={[
           { label: 'Services', href: '/services' },
@@ -69,28 +106,35 @@ export default function DigitalMarketingPage() {
         tagline={service.tagline}
         headline={service.headline}
         description={service.description}
+        primaryCtaText="Get a Quote"
+        secondaryCtaText="Contact Us"
+        secondaryCtaHref="/contact"
       />
 
       {/* Capabilities Section */}
       <section id="capabilities" className={styles.section}>
         <Container size="wide">
           <SectionHeading
-            label="GROWTH ARSENAL"
-            title="Precision Marketing Engineered for ROI."
-            description="We discard vanity metrics and focus relentlessly on acquiring qualified commercial opportunities through organic search and paid channels."
+            label="DIGITAL MARKETING SERVICES"
+            title="Digital Marketing Services"
+            description="Choose the digital marketing activities that fit your business goals, audience and available resources."
             align="left"
           />
 
           <div className={styles.capabilitiesGrid}>
-            {service.capabilities.map((cap) => (
+            {service.capabilities.map((cap, index) => {
+              const Icon = capabilityIcons[index];
+
+              return (
               <div key={cap.title} className={styles.capCard}>
                 <div className={styles.capHeader}>
-                  <div className={styles.capIconBullet} />
+                  <Icon className={styles.capIcon} aria-hidden="true" />
                   <h3 className={styles.capTitle}>{cap.title}</h3>
                 </div>
                 <p className={styles.capDesc}>{cap.description}</p>
               </div>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </section>
@@ -99,9 +143,9 @@ export default function DigitalMarketingPage() {
       <section className={styles.benefitsSection}>
         <Container size="wide">
           <SectionHeading
-            label="COMMERCIAL RESULTS"
-            title="Why Ambitious Brands Trust Grace."
-            description="Achieve predictable revenue expansion and establish unmistakable authority in your industry."
+            label="BUSINESS BENEFITS"
+            title="Benefits of Digital Marketing"
+            description="A joined-up strategy can help make your marketing clearer, more relevant and easier to assess."
             align="left"
           />
 
@@ -117,13 +161,15 @@ export default function DigitalMarketingPage() {
         </Container>
       </section>
 
+      <WhyChooseUs />
+
       {/* Process Section */}
       <section className={styles.section}>
         <Container size="wide">
           <SectionHeading
-            label="STRATEGY FRAMEWORK"
-            title="Our Performance Marketing Lifecycle."
-            description="A methodical process engineered to audit, execute, and continuously amplify acquisition channels."
+            label="HOW WE WORK"
+            title="A Clear, Collaborative Process"
+            description="We agree priorities with you, deliver the planned activity and review progress together."
             align="center"
           />
 
@@ -143,9 +189,9 @@ export default function DigitalMarketingPage() {
       <section className={styles.faqSection}>
         <Container size="narrow">
           <SectionHeading
-            label="CLARITY & TIMELINES"
-            title="Digital Marketing FAQs."
-            description="Everything you need to know about our growth retainers, channel management, and reporting."
+            label="QUESTIONS & ANSWERS"
+            title="Digital Marketing FAQs"
+            description="Common questions about our marketing services, approach and reporting."
             align="center"
           />
 
@@ -155,9 +201,11 @@ export default function DigitalMarketingPage() {
 
       {/* Enquiry CTA */}
       <ServiceCTASection
-        title="Ready to Scale Your Inbound Pipeline?"
-        description="Connect with our digital marketing specialists to evaluate your competitive positioning and organic growth opportunities."
-        primaryCtaText="Request a Marketing Audit"
+        title="Ready to Discuss Your Digital Marketing?"
+        description="Tell us about your business goals and we will discuss how our digital marketing services may help."
+        primaryCtaText="Get a Quote"
+        secondaryCtaText="Contact Us"
+        secondaryCtaHref="/contact"
         serviceTitle={service.title}
       />
     </div>

@@ -3,10 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
-import Button from '@/components/common/Button/Button';
 import CTASection from '@/components/common/CTASection/CTASection';
-import LanguageIcon from '@mui/icons-material/Language';
-import HubIcon from '@mui/icons-material/Hub';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import SpeedIcon from '@mui/icons-material/Speed';
@@ -24,16 +21,16 @@ import styles from './partnership.module.css';
 import Logo from "../../../public/logo/logo.png"
 
 export const metadata: Metadata = constructMetadata({
-  title: 'UK–India Strategic Partnership | Grace Technologies & Ank Square',
+  title: 'UK–India Marketing Partnership',
   description:
-    'See how UK-based Grace Technologies and Indian partner Ank Square combine business leadership and engineering to deliver digital services for UK clients.',
+    'Learn about the partnership between UK-based Grace Technologies and Ank Square in India supporting digital marketing work for UK businesses.',
   canonicalPath: '/partnership',
   keywords: [
-    'UK India technology partnership',
-    'Bilateral technology alliance',
+    'UK India digital marketing partnership',
+    'Bilateral marketing collaboration',
     'Grace Technologies and Ank Square',
-    'Cross-border digital transformation',
-    'UK technology consultancy India delivery',
+    'Cross-border marketing collaboration',
+    'Digital marketing services UK',
   ],
 });
 
@@ -58,13 +55,13 @@ export default function PartnershipPage() {
         <Container size="wide">
           <div className={styles.heroGrid}>
             <div className={styles.heroContent}>
-              <span className={styles.badge}>BILATERAL STRATEGIC ALLIANCE</span>
+              <span className={styles.badge}>DIGITAL MARKETING PARTNERSHIP</span>
               <h1 className={styles.heroTitle}>
-                British Business Vision. <br />
-                Indian Technology Expertise.
+                UK Business Focus. <br />
+                Collaborative Marketing.
               </h1>
               <p className={styles.heroSubtitle}>
-                Grace Technologies is a UK-based service company partnered with Ank Square in India. Together, we bring British business vision and Indian technology expertise to deliver digital systems and business transformation for our clients.
+                Grace Technologies is a UK-based digital marketing business that works with Ank Square in India on agreed marketing activity, content and campaigns.
               </p>
             </div>
 
@@ -114,16 +111,16 @@ export default function PartnershipPage() {
 
               <p className={styles.profileRole}>{uk.role}</p>
               <p className={styles.profileDesc}>
-                Headquartered in the UK, Grace Technologies manages business consulting, high-level architecture planning, client relationship management, and commercial service delivery. We ensure every technical solution serves clear, quantifiable business objectives.
+                Based in the UK, Grace Technologies works with clients to understand business goals, agree marketing priorities and coordinate delivery.
               </p>
 
               <div className={styles.coreContributions}>
                 <h4 className={styles.contribTitle}>Key Responsibilities:</h4>
                 <ul className={styles.contribList}>
-                  <li>Commercial requirements scoping and ROI analysis</li>
-                  <li>Client advisory and British corporate governance</li>
-                  <li>Executive milestone oversight & SLA guarantee</li>
-                  <li>Merchant account operational advisory</li>
+                  <li>Client relationships and business goals</li>
+                  <li>Marketing strategy and channel priorities</li>
+                  <li>Campaign coordination and agreed scope</li>
+                  <li>Client communication and reporting</li>
                 </ul>
               </div>
 
@@ -182,16 +179,16 @@ export default function PartnershipPage() {
 
               <p className={styles.profileRole}>{india.role}</p>
               <p className={styles.profileDesc}>
-                Based in India, Ank Square Private Limited serves as our premier engineering and technology execution partner. Their high-caliber engineering team implements modern web platforms, AI automation systems, and complex digital integrations.
+                Based in India, Ank Square Private Limited is our strategic partner. We collaborate on digital marketing activity, content and campaign delivery for businesses.
               </p>
 
               <div className={styles.coreContributions}>
                 <h4 className={styles.contribTitle}>Key Responsibilities:</h4>
                 <ul className={styles.contribList}>
-                  <li>Full-stack Next.js and TypeScript engineering</li>
-                  <li>AI agent pipelines, OCR systems, and custom automation</li>
-                  <li>DevOps, continuous deployment, and security hardening</li>
-                  <li>Technical SEO architecture & performance engineering</li>
+                  <li>Digital marketing content and campaign delivery</li>
+                    <li>Search, social, paid and email activity</li>
+                    <li>Campaign coordination and review</li>
+                    <li>Collaborative planning and reporting</li>
                 </ul>
               </div>
 
@@ -217,7 +214,7 @@ export default function PartnershipPage() {
           <div className={styles.legalNotice}>
             <h3 className={styles.legalTitle}>Formal Independent Partnership Framework</h3>
             <p className={styles.legalText}>
-              Grace Technologies ({uk.country}) and Ank Square Private Limited ({india.country}) operate as distinct, independently registered corporate legal entities. Neither entity owns the other, nor do they constitute a single corporate entity. Instead, both organisations operate under a legally defined strategic partnership agreement to offer unified, cross-border commercial and technical solutions to international clients.
+              Grace Technologies ({uk.country}) and Ank Square Private Limited ({india.country}) are distinct legal entities. Any joint marketing work is governed by the agreed responsibilities and terms for that work.
             </p>
           </div>
         </Container>
@@ -227,9 +224,9 @@ export default function PartnershipPage() {
       <section className={styles.benefitsSection}>
         <Container size="wide">
           <SectionHeading
-            label="THE BILATERAL ADVANTAGE"
-            title="Why Our Delivery Model Delivers Superior Results."
-            description="Our clients receive the distinct benefits of both corporate UK advisory proximity and premier Indian engineering depth."
+            label="HOW WE COLLABORATE"
+            title="A Collaborative Marketing Approach."
+            description="The partnership supports agreed digital marketing activity, with responsibilities discussed and defined for each engagement."
             align="center"
           />
 
@@ -238,9 +235,9 @@ export default function PartnershipPage() {
               <div className={styles.bIconWrap}>
                 <SpeedIcon />
               </div>
-              <h3 className={styles.bTitle}>Accelerated Time-to-Market</h3>
+              <h3 className={styles.bTitle}>Agreed Priorities</h3>
               <p className={styles.bDesc}>
-                Strategic daytime governance in the UK coupled with overlapping continuous engineering cycles in India enables agile sprint completions and faster system rollouts.
+                Marketing goals, channel priorities and responsibilities are discussed before work begins.
               </p>
             </div>
 
@@ -248,9 +245,9 @@ export default function PartnershipPage() {
               <div className={styles.bIconWrap}>
                 <MilitaryTechIcon />
               </div>
-              <h3 className={styles.bTitle}>Uncompromising Quality</h3>
+              <h3 className={styles.bTitle}>Connected Activity</h3>
               <p className={styles.bDesc}>
-                Every digital asset is architected to British corporate aesthetic standards, backed by exhaustive automated testing, TypeScript strict mode, and robust documentation.
+                Search, content, social, paid and email activity can be coordinated around the agreed plan.
               </p>
             </div>
 
@@ -258,9 +255,9 @@ export default function PartnershipPage() {
               <div className={styles.bIconWrap}>
                 <VerifiedUserIcon />
               </div>
-              <h3 className={styles.bTitle}>Cost-Effective Scalability</h3>
+              <h3 className={styles.bTitle}>Clear Communication</h3>
               <p className={styles.bDesc}>
-                Clients benefit from high-tier enterprise technology architecture without the excessive overhead typical of London traditional consultancies.
+                Clients can discuss progress, available reporting and next steps with the team.
               </p>
             </div>
           </div>
@@ -268,9 +265,9 @@ export default function PartnershipPage() {
       </section>
 
       <CTASection
-        title="Experience the Power of Our Global Delivery Model."
-        description="Schedule an initial strategic discovery conversation with our UK leadership team."
-        primaryCtaText="Initiate Partnership Discussion"
+        title="Discuss Your Digital Marketing Goals."
+        description="Contact Grace Technologies to talk about your audience, priorities and possible next steps."
+        primaryCtaText="Get a Quote"
         primaryCtaHref="/contact"
       />
     </div>

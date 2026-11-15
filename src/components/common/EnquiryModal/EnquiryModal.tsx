@@ -100,7 +100,7 @@ export default function EnquiryModal() {
     resolver: zodResolver(quickEnquirySchema),
     defaultValues: {
       fullName: '',
-      serviceType: 'Website Development',
+      serviceType: 'Digital Marketing',
       country: 'United Kingdom',
       email: '',
       phone: '+44 ',
@@ -156,8 +156,8 @@ export default function EnquiryModal() {
     // Listen for custom trigger events to open the modal from buttons across the site
     const handleOpenModal = (event: Event) => {
       const customEvent = event as CustomEvent<{ serviceType?: string }>;
-      if (customEvent.detail?.serviceType) {
-        setValue('serviceType', customEvent.detail.serviceType as QuickEnquiryData['serviceType']);
+      if (customEvent.detail?.serviceType === 'Digital Marketing') {
+        setValue('serviceType', 'Digital Marketing');
       }
       setIsOpen(true);
       setStatus('idle');
@@ -198,7 +198,7 @@ export default function EnquiryModal() {
         });
         reset({
           fullName: '',
-          serviceType: 'Website Development',
+          serviceType: 'Digital Marketing',
           country: 'United Kingdom',
           email: '',
           phone: '+44 ',
@@ -314,11 +314,7 @@ export default function EnquiryModal() {
                         aria-invalid={Boolean(errors.serviceType)}
                         {...register('serviceType')}
                       >
-                        <option value="Website Development">Website Development</option>
-                        <option value="Merchant Account Management">Merchant Account Management</option>
-                        <option value="AI Automation">AI Automation</option>
                         <option value="Digital Marketing">Digital Marketing</option>
-                        <option value="Other Consultation">Other Consultation</option>
                       </select>
                       <KeyboardArrowDownIcon className={styles.selectArrowIcon} aria-hidden="true" />
                     </div>

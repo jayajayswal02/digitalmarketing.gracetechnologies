@@ -4,8 +4,8 @@ import React from 'react';
 import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import Button from '@/components/common/Button/Button';
-import ProjectCard, { ProjectItem } from './ProjectCard';
-import projectsData from '@/config/projects.json';
+import ProjectCard from './ProjectCard';
+import { PROJECTS_DATA } from '@/data/projects';
 import styles from './ProjectsSection.module.css';
 
 interface ProjectsSectionProps {
@@ -14,16 +14,16 @@ interface ProjectsSectionProps {
 }
 
 export default function ProjectsSection({ limit, showViewAll = true }: ProjectsSectionProps) {
-  const allProjects = projectsData.projects as ProjectItem[];
+  const allProjects = PROJECTS_DATA;
   const displayedProjects = limit ? allProjects.slice(0, limit) : allProjects;
 
   return (
     <section id="projects-section" className={styles.section}>
       <Container size="wide">
         <SectionHeading
-          label="FEATURED CASE STUDIES & IMPLEMENTATIONS"
-          title="Engineered for Measurable Impact."
-          description="Explore our proven digital architectures, multi-currency merchant management platforms, autonomous AI workflows, and precision growth marketing implementations."
+          label="SELECTED CLIENT WORK"
+          title="Explore Our Client Work."
+          description="View selected projects and collaborations from Grace Technologies and its clients."
           align="center"
         />
 
@@ -36,10 +36,10 @@ export default function ProjectsSection({ limit, showViewAll = true }: ProjectsS
         {showViewAll && (
           <div className={styles.ctaRow}>
             <Button href="/projects" variant="secondary" size="lg" icon>
-              View All Case Studies
+              View All Client Work
             </Button>
             <Button href="/contact" variant="outline" size="lg">
-              Discuss Your Project
+              Get a Quote
             </Button>
           </div>
         )}
@@ -47,4 +47,3 @@ export default function ProjectsSection({ limit, showViewAll = true }: ProjectsS
     </section>
   );
 }
-

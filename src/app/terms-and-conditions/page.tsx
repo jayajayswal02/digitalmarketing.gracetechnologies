@@ -8,7 +8,7 @@ import styles from './legal.module.css';
 export const metadata: Metadata = constructMetadata({
   title: 'Terms & Conditions',
   description:
-    'Review the terms for Grace Technologies’ website and UK services, including website development, merchant account support and our Ank Square partnership.',
+    'Review the terms for the Grace Technologies website and digital marketing services for UK businesses.',
   canonicalPath: '/terms-and-conditions',
 });
 
@@ -30,28 +30,28 @@ export default function TermsAndConditionsPage() {
           <section className={styles.legalSection}>
             <h2>1. Introduction & Acceptance</h2>
             <p>
-              By accessing the Grace Technologies website or engaging our consultancy services, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please discontinue use immediately.
+              By accessing the Grace Technologies website or engaging our digital marketing services, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please discontinue use immediately.
             </p>
           </section>
 
           <section className={styles.legalSection}>
             <h2>2. Nature of Services & Partnership</h2>
             <p>
-              Grace Technologies is a United Kingdom business and technology consultancy strategically partnered with Ank Square Private Limited, India. Both companies are distinct, independent legal entities operating collaboratively under contract to deliver client solutions.
+              Grace Technologies is a United Kingdom digital marketing business. Where work involves independent partners, each party remains a separate legal entity and the agreed client contract defines their responsibilities.
             </p>
           </section>
 
           <section className={styles.legalSection}>
-            <h2>3. Merchant Account Advisory Disclaimer</h2>
+            <h2>3. Digital Marketing Services</h2>
             <p>
-              Grace Technologies provides merchant account onboarding support, document preparation, and operational coordination. We are neither a bank, credit institution, nor payment processor. We do not provide financial or banking services and do not warrant or guarantee merchant account approvals, which remain solely at the discretion of independent acquiring banks.
+              The scope, deliverables, fees, advertising budgets and reporting for digital marketing work are set out in the relevant client agreement. Marketing outcomes depend on factors outside our control, and we do not guarantee search rankings, leads, sales or revenue.
             </p>
           </section>
 
           <section className={styles.legalSection}>
             <h2>4. Intellectual Property</h2>
             <p>
-              All website content, brand assets, typography, and original designs are the intellectual property of Grace Technologies. Custom software and source code produced for clients will be assigned in accordance with the specific provisions outlined in each project&apos;s Master Services Agreement (MSA).
+              Website content, brand assets and original materials remain the intellectual property of their respective owners. Any rights in client marketing materials or deliverables are governed by the applicable client agreement.
             </p>
           </section>
 

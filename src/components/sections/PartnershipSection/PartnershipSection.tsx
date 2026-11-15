@@ -5,8 +5,6 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
-import LanguageIcon from '@mui/icons-material/Language';
-import HubIcon from '@mui/icons-material/Hub';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { UkFlag, IndiaFlag } from '@/components/common/Flags/CountryFlags';
@@ -27,7 +25,7 @@ export default function PartnershipSection() {
             Our Partnership
           </h2>
           <p className={styles.description}>
-            A strategic partnership combining United Kingdom commercial leadership and strategic client governance with world-class engineering execution from Ank Square Private Limited, India.
+            A partnership between Grace Technologies in the United Kingdom and Ank Square Private Limited in India, supporting agreed digital marketing work for businesses.
           </p>
         </div>
 
@@ -75,19 +73,19 @@ export default function PartnershipSection() {
             <ul className={styles.roleList}>
               <li className={styles.roleItem}>
                 <span className={styles.bullet}>•</span>
-                <span>Business development & client relationships</span>
+                <span>Client relationships and business goals</span>
               </li>
               <li className={styles.roleItem}>
                 <span className={styles.bullet}>•</span>
-                <span>High-level commercial strategy & project scoping</span>
+                <span>Marketing strategy and channel priorities</span>
               </li>
               <li className={styles.roleItem}>
                 <span className={styles.bullet}>•</span>
-                <span>End-to-end service coordination & governance</span>
+                <span>Campaign coordination and agreed scope</span>
               </li>
               <li className={styles.roleItem}>
                 <span className={styles.bullet}>•</span>
-                <span>British corporate elegance & executive reporting</span>
+                <span>Client communication and reporting</span>
               </li>
             </ul>
 
@@ -156,19 +154,19 @@ export default function PartnershipSection() {
             <ul className={styles.roleList}>
               <li className={styles.roleItem}>
                 <span className={styles.bullet}>•</span>
-                <span>Technical architecture & full-stack development</span>
+                <span>Digital marketing content and campaign delivery</span>
               </li>
               <li className={styles.roleItem}>
                 <span className={styles.bullet}>•</span>
-                <span>AI engineering, model fine-tuning & automation pipelines</span>
+                <span>Search, social, paid and email activity</span>
               </li>
               <li className={styles.roleItem}>
                 <span className={styles.bullet}>•</span>
-                <span>Digital service delivery & technical scaling</span>
+                <span>Campaign coordination and review</span>
               </li>
               <li className={styles.roleItem}>
                 <span className={styles.bullet}>•</span>
-                <span>Rigorous automated QA, security, & SLA monitoring</span>
+                <span>Collaborative planning and reporting</span>
               </li>
             </ul>
 
@@ -189,7 +187,7 @@ export default function PartnershipSection() {
         {/* Explanatory disclaimer / Legal Distinction */}
         <div className={styles.disclaimerBox}>
           <p className={styles.disclaimerText}>
-            Grace Technologies ({uk.country}) and Ank Square Private Limited ({india.country}) operate as distinct, independently registered corporate legal entities bound by a formal bilateral partnership agreement to deliver exceptional cross-border technology consulting and engineering.
+            Grace Technologies ({uk.country}) and Ank Square Private Limited ({india.country}) operate as distinct legal entities. Their agreed responsibilities for any joint digital marketing work are defined separately from this website.
           </p>
           <div className={styles.ctaWrapper}>
             <Button href="/partnership" variant="primary" size="md" icon>

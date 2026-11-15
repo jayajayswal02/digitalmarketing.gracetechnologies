@@ -40,7 +40,7 @@ export default function CompanyIntro() {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              Grace Technologies combines technology and business expertise to help UK companies move forward. We provide website development, merchant account management, AI automation and digital marketing in partnership with Ank Square in India.
+              Digital marketing brings together channels such as search, social media, content, email and paid campaigns to help businesses reach customers online. Grace Technologies builds practical strategies for UK small and medium-sized businesses, startups and e-commerce companies.
             </motion.p>
 
             <motion.div
@@ -73,29 +73,29 @@ export default function CompanyIntro() {
               </div>
 
               <div className={styles.cardContent}>
-                <p className={styles.cardHeading}>Technology That Delivers Real Results.</p>
+                <p className={styles.cardHeading}>Digital Marketing Built Around Your Goals.</p>
                 <p className={styles.cardText}>
-                  At Grace Technologies, we combine strategic business insight with technical excellence to deliver solutions that create lasting value. From software and mobile application development to AI automation and digital services, every project is strategically managed in the United Kingdom and executed by our dedicated technology delivery partner, Ank Square Private Limited, India. This approach enables us to deliver scalable, efficient, and high-quality solutions aligned with our clients' business objectives.                </p>
+                  We work with UK businesses to build clear marketing strategies, improve search visibility and connect with relevant audiences. Our approach focuses on practical activity, open communication and reporting that helps clients understand their marketing progress.                </p>
                 <div className={styles.valuesList}>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
                       <p className={styles.valTitle}>Strategic Business Alignment</p>
-                      <p className={styles.valDesc}>Connecting technology decisions with business goals to deliver meaningful results.</p>
+                      <p className={styles.valDesc}>Connecting marketing decisions with business goals and audience needs.</p>
                     </div>
                   </div>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
-                      <p className={styles.valTitle}>Tailored Technology Solutions</p>
-                      <p className={styles.valDesc}>Developing custom, scalable, and maintainable solutions designed around your business needs.</p>
+                      <p className={styles.valTitle}>Tailored Marketing Strategy</p>
+                      <p className={styles.valDesc}>Aligning channel choices and messaging with your audience and business priorities.</p>
                     </div>
                   </div>
                   <div className={styles.valueItem}>
                     <div className={styles.valueCheck}>✓</div>
                     <div>
-                      <p className={styles.valTitle}>Reliable Project Delivery</p>
-                      <p className={styles.valDesc}>Ensuring transparent communication, structured project management, timely delivery, and ongoing support.</p>
+                      <p className={styles.valTitle}>Clear, Consistent Reporting</p>
+                      <p className={styles.valDesc}>Sharing useful updates so you can understand activity, results and next steps.</p>
                     </div>
                   </div>
                 </div>

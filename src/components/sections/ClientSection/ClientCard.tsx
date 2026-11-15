@@ -14,18 +14,6 @@ export interface ClientItem {
   logo: string;
   category: string;
   location: string;
-  project: string;
-  summary: string;
-  testimonial: string;
-  metrics: string;
-  workDone: Array<{
-    type: string;
-    title: string;
-    description: string;
-    images?: string[];
-    url?: string;
-    presentationUrl?: string;
-  }>;
 }
 
 interface ClientCardProps {
@@ -34,7 +22,7 @@ interface ClientCardProps {
 }
 
 export default function ClientCard({ client, index }: ClientCardProps) {
-  const { name, slug, logo, category, location, project, summary } = client;
+  const { name, slug, logo, category, location } = client;
 
   const initials = name
     .split(' ')
@@ -50,11 +38,9 @@ export default function ClientCard({ client, index }: ClientCardProps) {
       viewport={{ once: true, margin: '-30px' }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
     >
-      {/* Corner Bracket Tech Accents */}
       <span className={styles.bracketTL} />
       <span className={styles.bracketBR} />
 
-      {/* Visual Preview Graphic with Dedicated Company Logo Box */}
       <div className={styles.previewArea}>
         <div className={styles.previewGlow} />
         {location && <span className={styles.previewTopBadge}>{location}</span>}
@@ -74,26 +60,23 @@ export default function ClientCard({ client, index }: ClientCardProps) {
         </div>
       </div>
 
-      {/* Card Content Information */}
       <div className={styles.cardContent}>
         <div>
           <span className={styles.categoryLabel}>{category}</span>
           <h3 className={styles.clientName}>{name}</h3>
-          <p className={styles.projectTitle}>{project}</p>
-          <p className={styles.description}>{summary}</p>
+          <p className={styles.projectTitle}>Client profile</p>
         </div>
 
-        {/* Action Row */}
         <div className={styles.cardActionRow}>
           <Link href={`/client/${slug}`} className={styles.viewProjectLink}>
-            <span>View {name} case study</span>
+            <span>View client profile</span>
             <ArrowForwardIcon />
           </Link>
 
           <Link
             href={`/client/${slug}`}
             className={styles.actionCircle}
-            aria-label={`View full project details for ${name}`}
+            aria-label={`View client profile for ${name}`}
           >
             <ArrowForwardIcon />
           </Link>

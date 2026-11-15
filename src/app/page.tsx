@@ -14,26 +14,44 @@ import HomeContactSection from '@/components/sections/HomeContactSection/HomeCon
 import GlobalOffices from '@/components/sections/GlobalOffices/GlobalOffices';
 
 import { constructMetadata } from '@/lib/seo/metadata';
+import JsonLd from '@/components/seo/JsonLd';
+import { getWebPageSchema } from '@/lib/seo/schema';
+import { SEO_CONFIG } from '@/lib/seo/config';
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Digital & Technology Solutions UK',
-  description:
-    'UK-based Grace Technologies partners with Ank Square for website development, merchant account management, AI automation and digital marketing.',
+  title: 'Digital Marketing Services UK',
+  description: SEO_CONFIG.defaultDescription,
   canonicalPath: '/',
   keywords: [
-    'Technology company UK',
-    'Digital solutions company',
-    'Business technology services',
-    'Website development UK',
-    'AI automation services UK',
-    'Merchant account management',
-    'Digital marketing agency UK',
+    'Digital Marketing Agency UK',
+    'Digital Marketing Services UK',
+    'Digital Marketing Company UK',
+    'Online Marketing Agency UK',
+    'Digital Marketing Solutions UK',
+    'SEO Services UK',
+    'Search Engine Optimisation',
+    'Generative Engine Optimisation',
+    'Answer Engine Optimisation',
+    'Social Media Marketing UK',
+    'Google Ads Management',
+    'Paid Advertising Services',
+    'Content Marketing Services',
+    'Email Marketing Services',
+    'Lead Generation Services',
+    'Digital Marketing Strategy',
   ],
 });
 
 export default function HomePage() {
+  const webPageSchema = getWebPageSchema({
+    name: SEO_CONFIG.defaultTitle,
+    description: SEO_CONFIG.defaultDescription,
+    url: SEO_CONFIG.siteUrl,
+  });
+
   return (
     <>
+      <JsonLd data={webPageSchema} />
       {/* SECTION 1 – CINEMATIC HERO */}
       <Hero />
 
@@ -65,12 +83,12 @@ export default function HomePage() {
 
       {/* SECTION 10 – FINAL CTA */}
       <CTASection
-        title="Your Next Move Starts With a Conversation."
-        description="Let's discuss your ideas, challenges and opportunities. Together, we can build something meaningful."
-        primaryCtaText="Start a Conversation"
-        primaryCtaHref="#contact-section"
-        secondaryCtaText="Explore Capabilities"
-        secondaryCtaHref="/services"
+        title="Ready to Grow Your Business?"
+        description="Talk with Grace Technologies about a digital marketing strategy for your business."
+        primaryCtaText="Get a Quote"
+        primaryCtaHref="/contact"
+        secondaryCtaText="Contact Us"
+        secondaryCtaHref="/contact"
       />
 
       {/* SECTION 10 – CONTACT SECTION */}

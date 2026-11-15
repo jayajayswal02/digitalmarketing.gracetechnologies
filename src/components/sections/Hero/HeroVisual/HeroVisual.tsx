@@ -12,7 +12,7 @@ export default function HeroVisual() {
   return (
     <div
       className={styles.heroVisualContainer}
-      aria-label="Grace Technologies Interactive 3D Digital Globe Ecosystem"
+      aria-label="Grace Technologies Digital Marketing Visual"
     >
       {/* Background Deep Cosmic Radial Light */}
       <div className={styles.ambientCoreGlow} />
@@ -24,7 +24,7 @@ export default function HeroVisual() {
       {/* Center 3D Digital Earth Globe with Equatorial Ring & Lighting */}
       <DigitalGlobe activePlatform={activePlatform} />
 
-      {/* 4 Satellites revolving in a circular orbit around the globe */}
+      {/* Digital marketing service link revolving around the globe */}
       <OrbitingSatellites
         activePlatform={activePlatform}
         onHover={setActivePlatform}

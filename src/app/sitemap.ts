@@ -3,6 +3,7 @@ import { SEO_CONFIG } from '@/lib/seo/config';
 import clientsData from '@/config/clients.json';
 import { BLOG_POSTS } from '@/data/blog';
 import { getAllServiceConfigs } from '@/config/services';
+import { getLocationStatus } from '@/config/locationSeo';
 import { cities, normalizeSegment } from '@/data/cities';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,85 +12,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     {
       url: `${baseUrl}`,
-      lastModified: new Date('2026-11-01'),
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date('2026-11-01'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-11-01'),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date('2026-11-01'),
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/website-development`,
-      lastModified: new Date('2026-11-01'),
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/merchant-account-management`,
-      lastModified: new Date('2026-11-01'),
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/ai-automation`,
-      lastModified: new Date('2026-11-01'),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/digital-marketing`,
-      lastModified: new Date('2026-11-01'),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/partnership`,
-      lastModified: new Date('2026-11-01'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/projects`,
-      lastModified: new Date('2026-11-01'),
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/client`,
-      lastModified: new Date('2026-11-01'),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date('2026-11-01'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date('2026-10-30'),
       changeFrequency: 'yearly' as const,
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms-and-conditions`,
-      lastModified: new Date('2026-10-30'),
       changeFrequency: 'yearly' as const,
       priority: 0.3,
     },
@@ -104,12 +76,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const clientRoutes = clientsData.clients.map((client) => ({
     url: `${baseUrl}/client/${client.slug}`,
-    lastModified: new Date('2026-11-01'),
     changeFrequency: 'monthly' as const,
     priority: 0.75,
   }));
 
-  // Generate dynamic location landing pages for all UK cities across all active services
+  // Only include location pages approved for indexing.
   const services = getAllServiceConfigs();
   const locationRoutes: MetadataRoute.Sitemap = [];
 
@@ -118,10 +89,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const cSlug = normalizeSegment(item.city);
       const sSlug = normalizeSegment(item.state);
       const coSlug = normalizeSegment(item.country);
+      const locationStatus = getLocationStatus(
+        item.city,
+        item.state,
+        item.country,
+        s.slug
+      );
+
+      if (!locationStatus.isIndexable) {
+        continue;
+      }
 
       locationRoutes.push({
         url: `${baseUrl}/services/${s.slug}/${cSlug}/${sSlug}/${coSlug}`,
-        lastModified: new Date('2026-11-09'),
         changeFrequency: 'weekly' as const,
         priority: 0.75,
       });

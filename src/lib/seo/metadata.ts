@@ -3,6 +3,7 @@ import { SEO_CONFIG } from './config';
 
 export interface MetadataGeneratorOptions {
   title?: string;
+  titleIsAbsolute?: boolean;
   description?: string;
   canonicalPath?: string;
   ogImage?: string;
@@ -17,6 +18,7 @@ export interface MetadataGeneratorOptions {
 
 export function constructMetadata({
   title,
+  titleIsAbsolute = false,
   description,
   canonicalPath = '',
   ogImage,
@@ -28,7 +30,11 @@ export function constructMetadata({
   modifiedTime,
   authors = [],
 }: MetadataGeneratorOptions = {}): Metadata {
-  const pageTitle = title ? `${title} | ${SEO_CONFIG.siteName}` : SEO_CONFIG.defaultTitle;
+  const pageTitle = title
+    ? titleIsAbsolute
+      ? title
+      : `${title} | ${SEO_CONFIG.siteName}`
+    : SEO_CONFIG.defaultTitle;
   const pageDescription = description || SEO_CONFIG.defaultDescription;
   const cleanPath = canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`;
   const canonicalUrl = `${SEO_CONFIG.siteUrl}${cleanPath === '/' ? '' : cleanPath}`;
@@ -46,7 +52,7 @@ export function constructMetadata({
   }
 
   return {
-    title: pageTitle,
+    title: { absolute: pageTitle },
     description: pageDescription,
     keywords: keywords.length > 0 ? keywords : undefined,
     authors: authors.length > 0 ? authors.map((name) => ({ name })) : undefined,
@@ -67,9 +73,7 @@ export function constructMetadata({
       images: [
         {
           url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: `${pageTitle} - ${SEO_CONFIG.siteName}`,
+          alt: pageTitle,
         },
       ],
     },
@@ -79,12 +83,6 @@ export function constructMetadata({
       description: pageDescription,
       images: [ogImageUrl],
       creator: '@grace_Official4',
-    },
-    other: {
-      'geo.region': 'GB-LND',
-      'geo.placename': 'Romford, Greater London',
-      'geo.position': `${SEO_CONFIG.contact.uk.geo.latitude};${SEO_CONFIG.contact.uk.geo.longitude}`,
-      ICBM: `${SEO_CONFIG.contact.uk.geo.latitude}, ${SEO_CONFIG.contact.uk.geo.longitude}`,
     },
     robots: {
       index: !noIndex,
@@ -99,4 +97,3 @@ export function constructMetadata({
     },
   };
 }
-

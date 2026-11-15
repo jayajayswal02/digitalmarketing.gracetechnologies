@@ -4,7 +4,6 @@ import React, { useState, useMemo } from 'react';
 import Container from '@/components/common/Container/Container';
 import ProjectFilters, { CategoryFilter } from '@/components/sections/Projects/ProjectFilters';
 import ProjectCard from '@/components/sections/Projects/ProjectCard';
-import ProjectStats from '@/components/sections/Projects/ProjectStats';
 import { ProjectItem } from '@/data/projects';
 import styles from './ProjectsClientView.module.css';
 
@@ -41,11 +40,6 @@ export default function ProjectsClientView({ initialProjects }: ProjectsClientVi
         ))}
       </div>
 
-      {/* Trust & Delivery Pillars Strip */}
-      {/* <div className={styles.statsWrapper}>
-        <ProjectStats />
-      </div> */}
     </Container>
   );
 }
-

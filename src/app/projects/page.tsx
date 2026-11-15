@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Container from '@/components/common/Container/Container';
 import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ServiceCTASection from '@/components/sections/ServiceCTASection/ServiceCTASection';
-import ClientSection from '@/components/sections/ClientSection/ClientSection';
 import Breadcrumb from '@/components/common/Breadcrumb/Breadcrumb';
 import JsonLd from '@/components/seo/JsonLd';
 import { constructMetadata } from '@/lib/seo/metadata';
@@ -11,20 +10,18 @@ import { getBreadcrumbSchema } from '@/lib/seo/schema';
 import { SEO_CONFIG } from '@/lib/seo/config';
 import ProjectsClientView from './ProjectsClientView';
 import projectsConfig from '@/config/projects.json';
-import { ProjectItem } from '@/data/projects';
+import type { ProjectItem } from '@/data/projects';
 import styles from './projects.module.css';
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Our Projects & Case Studies | Grace Technologies',
+  title: 'Selected Client Relationships',
   description:
-    'Browse Grace Technologies case studies for UK and international clients, from website development and merchant services to AI automation and marketing.',
+    'Explore selected client organisations and their work with Grace Technologies.',
   canonicalPath: '/projects',
   keywords: [
     'Grace Technologies projects',
-    'Web development case studies',
-    'Merchant management case studies',
-    'AI automation examples UK',
-    'Digital transformation portfolio',
+    'Grace Technologies client profiles',
+    'Digital marketing services UK',
   ],
 });
 
@@ -50,9 +47,9 @@ export default function ProjectsPage() {
       <section className={styles.heroSection}>
         <Container size="wide">
           <SectionHeading
-            label="OUR PORTFOLIO"
-            title="Ideas Into Real Digital Solutions."
-            description="See how ideas become real digital solutions through our website development, merchant operations, AI automation and digital marketing projects."
+            label="CLIENT PROFILES"
+            title="Selected Client Relationships."
+            description="Meet some of the businesses Grace Technologies has worked with."
             align="center"
             headingLevel="h1"
           />
@@ -67,11 +64,11 @@ export default function ProjectsPage() {
  
       {/* Conversion CTA with modal trigger */}
       <ServiceCTASection
-        title="Have an Ambitious Project in Mind?"
-        description="Connect with our UK consulting team to discuss your architectural roadmap, specifications, and commercial timeline."
-        primaryCtaText="Initiate Project Discovery"
-        secondaryCtaText="Explore Capabilities"
-        secondaryCtaHref="/services"
+        title="Looking for Digital Marketing Support?"
+        description="Talk with our UK team about your business goals and marketing priorities."
+        primaryCtaText="Get a Quote"
+        secondaryCtaText="Digital Marketing"
+        secondaryCtaHref="/services/digital-marketing"
       />
     </div>
   );

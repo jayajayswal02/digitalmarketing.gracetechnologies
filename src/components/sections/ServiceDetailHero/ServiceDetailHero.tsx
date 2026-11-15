@@ -15,6 +15,9 @@ interface ServiceDetailHeroProps {
   headline: string;
   description: string;
   serviceTitle?: string;
+  primaryCtaText?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
 }
 
 export default function ServiceDetailHero({
@@ -24,6 +27,9 @@ export default function ServiceDetailHero({
   headline,
   description,
   serviceTitle,
+  primaryCtaText = 'Get a Quote',
+  secondaryCtaText = 'Contact Us',
+  secondaryCtaHref = '/contact',
 }: ServiceDetailHeroProps) {
   return (
     <section className={styles.hero}>
@@ -54,10 +60,10 @@ export default function ServiceDetailHero({
                 icon
                 onClick={() => openEnquiryModal(serviceTitle || tagline)}
               >
-                Consult On This Service
+                {primaryCtaText}
               </Button>
-              <Button href="#capabilities" variant="outline" size="lg">
-                View Capabilities
+              <Button href={secondaryCtaHref} variant="outline" size="lg">
+                {secondaryCtaText}
               </Button>
             </div>
           </motion.div>

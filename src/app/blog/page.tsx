@@ -9,20 +9,18 @@ import { BLOG_POSTS } from '@/data/blog';
 import styles from './blog.module.css';
 
 export const metadata: Metadata = constructMetadata({
-  title: 'Blog & Insights | SEO, GEO, AEO & AI Automation UK',
+  title: 'Digital Marketing Insights',
   description:
-    'Authoritative technical intelligence on UK website engineering, Generative Engine Optimisation (GEO), Answer Engine Optimisation (AEO), enterprise AI automation and merchant operations.',
+    'Read Grace Technologies insights on digital marketing for UK businesses, including SEO, GEO, AEO, content, social media and lead generation.',
   canonicalPath: '/blog',
   keywords: [
     'Grace Technologies blog',
-    'Website development company UK insights',
-    'SEO GEO AEO strategy UK',
-    'Generative engine optimisation',
-    'Answer engine optimisation guide',
-    'Enterprise AI automation agency UK',
-    'Merchant account operations management',
-    'Next.js full-stack engineering London',
-    'B2B digital transformation UK',
+    'Digital Marketing Services UK',
+    'SEO Services UK',
+    'Generative Engine Optimisation',
+    'Answer Engine Optimisation',
+    'Content Marketing Services',
+    'Lead Generation Services',
   ],
 });
 

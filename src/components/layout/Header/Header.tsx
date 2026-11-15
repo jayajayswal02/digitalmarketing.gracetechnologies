@@ -8,9 +8,6 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import CodeIcon from '@mui/icons-material/Code';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import SmartToyIcon from '@mui/icons-material/SmartToy';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
@@ -21,27 +18,9 @@ import Image from 'next/image';
 
 const servicesList = [
   {
-    title: 'Website Development',
-    href: '/services/website-development',
-    description: 'Digital experiences designed to make an impact. High-performance Next.js architectures.',
-    icon: CodeIcon,
-  },
-  {
-    title: 'Merchant Account Management',
-    href: '/services/merchant-account-management',
-    description: 'Payment operations, documentation advisory and ongoing provider coordination.',
-    icon: AccountBalanceWalletIcon,
-  },
-  {
-    title: 'AI Automation',
-    href: '/services/ai-automation',
-    description: 'Workflow orchestration, intelligent customer engines, and custom enterprise AI solutions.',
-    icon: SmartToyIcon,
-  },
-  {
     title: 'Digital Marketing',
     href: '/services/digital-marketing',
-    description: 'Data-driven SEO, conversion optimization, and high-impact multi-channel acquisition.',
+    description: 'SEO, paid advertising, social media and lead generation for UK businesses.',
     icon: TrendingUpIcon,
   },
 ];
@@ -199,7 +178,7 @@ export default function Header() {
               icon
               onClick={() => openEnquiryModal()}
             >
-              Let&apos;s Talk
+              Get a Quote
             </Button>
           </div>
 
@@ -271,7 +250,7 @@ export default function Header() {
                       openEnquiryModal();
                     }}
                   >
-                    Let&apos;s Talk
+                    Get a Quote
                   </Button>
                 </div>
               </div>

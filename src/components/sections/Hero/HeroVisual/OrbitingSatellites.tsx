@@ -10,42 +10,18 @@ export interface SatelliteData {
   title: string;
   subtitle: string;
   href: string;
-  icon: 'code' | 'trending' | 'cart' | 'ai';
+  icon: 'trending';
   orbitAngleDeg: number; // 0 (Top), 90 (Right), 180 (Bottom), 270 (Left)
 }
 
 const satellites: SatelliteData[] = [
   {
-    id: 'website-development',
-    title: 'WEBSITE DEVELOPMENT',
-    subtitle: 'Modern Web Experiences',
-    href: '/services/website-development',
-    icon: 'code',
-    orbitAngleDeg: 0,
-  },
-  {
     id: 'digital-marketing',
     title: 'DIGITAL MARKETING',
-    subtitle: 'Growth & Performance',
+    subtitle: 'SEO, Campaigns & Growth',
     href: '/services/digital-marketing',
     icon: 'trending',
-    orbitAngleDeg: 90,
-  },
-  {
-    id: 'ai-automation',
-    title: 'AI AUTOMATION',
-    subtitle: 'Intelligent Workflows',
-    href: '/services/ai-automation',
-    icon: 'ai',
-    orbitAngleDeg: 180,
-  },
-  {
-    id: 'merchant-account-management',
-    title: 'MERCHANT MANAGEMENT',
-    subtitle: 'Payments & Business Operations',
-    href: '/services/merchant-account-management',
-    icon: 'cart',
-    orbitAngleDeg: 270,
+    orbitAngleDeg: 0,
   },
 ];
 

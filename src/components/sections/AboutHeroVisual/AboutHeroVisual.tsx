@@ -22,8 +22,8 @@ export default function AboutHeroVisual() {
             <span className={styles.dot} />
             <span className={styles.dot} />
           </div>
-          <span className={styles.terminalTag}>GT // BILATERAL MATRIX</span>
-          <span className={styles.liveBadge}>OPERATIONAL</span>
+          <span className={styles.terminalTag}>GT // DIGITAL MARKETING</span>
+          <span className={styles.liveBadge}>COLLABORATION</span>
         </div>
 
         {/* Central Interconnected Hexagonal Monolith */}
@@ -45,7 +45,7 @@ export default function AboutHeroVisual() {
             </div>
             <div className={styles.nodeText}>
               <span className={styles.nodeTitle}>United Kingdom</span>
-              <span className={styles.nodeDesc}>Strategic Governance & Advisory</span>
+              <span className={styles.nodeDesc}>UK Business Planning</span>
             </div>
           </div>
 
@@ -59,8 +59,8 @@ export default function AboutHeroVisual() {
               <span className={styles.flagIcon}>🇮🇳</span>
             </div>
             <div className={styles.nodeText}>
-              <span className={styles.nodeTitle}>India Tech Hub</span>
-              <span className={styles.nodeDesc}>Ank Square Engineering Engine</span>
+              <span className={styles.nodeTitle}>India Partner Team</span>
+              <span className={styles.nodeDesc}>Campaign and Content Support</span>
             </div>
           </div>
         </div>
@@ -68,18 +68,18 @@ export default function AboutHeroVisual() {
         {/* Bottom Metrics Ticker */}
         <div className={styles.metricsBar}>
           <div className={styles.metricItem}>
-            <span className={styles.metricVal}>Bespoke</span>
-            <span className={styles.metricLbl}>Next.js Engineering</span>
+            <span className={styles.metricVal}>Audience-Led</span>
+            <span className={styles.metricLbl}>Marketing Strategy</span>
           </div>
           <div className={styles.metricDivider} />
           <div className={styles.metricItem}>
-            <span className={styles.metricVal}>Strict</span>
-            <span className={styles.metricLbl}>Commercial Governance</span>
+            <span className={styles.metricVal}>Agreed</span>
+            <span className={styles.metricLbl}>Channel Priorities</span>
           </div>
           <div className={styles.metricDivider} />
           <div className={styles.metricItem}>
-            <span className={styles.metricVal}>24/7</span>
-            <span className={styles.metricLbl}>Delivery Velocity</span>
+            <span className={styles.metricVal}>Regular</span>
+            <span className={styles.metricLbl}>Review and Reporting</span>
           </div>
         </div>
       </div>
@@ -87,14 +87,13 @@ export default function AboutHeroVisual() {
       {/* Floating auxiliary technological chips */}
       <div className={`${styles.floatingChip} ${styles.chip1}`}>
         <span className={styles.chipDot} />
-        <span>ISO Quality & SLA Guaranteed</span>
+        <span>Marketing Services for UK Businesses</span>
       </div>
 
       <div className={`${styles.floatingChip} ${styles.chip2}`}>
         <span className={styles.chipDot} />
-        <span>100% Zero-Data-Retention AI</span>
+        <span>SEO, Content and Campaigns</span>
       </div>
     </div>
   );
 }
-

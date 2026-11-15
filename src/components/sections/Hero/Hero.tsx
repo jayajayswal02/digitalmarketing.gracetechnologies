@@ -2,11 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Container from '@/components/common/Container/Container';
 import Button from '@/components/common/Button/Button';
 import HeroVisual from './HeroVisual/HeroVisual';
-import { openEnquiryModal } from '@/utils/modal';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -28,7 +26,7 @@ export default function Hero() {
             >
               <span className={styles.badgePulse} />
               <span className={styles.badgeText}>
-                GLOBAL TECHNOLOGY PARTNERSHIP
+                DIGITAL MARKETING FOR UK BUSINESSES
               </span>
             </motion.div>
 
@@ -38,8 +36,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Technology and Digital Solutions for{' '}
-              <span className={styles.highlightText}>Growing Businesses</span>
+              Digital Marketing Services to{' '}
+              <span className={styles.highlightText}>Grow Your Business</span>
             </motion.h1>
 
             <motion.p
@@ -48,7 +46,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
             >
-              Grace Technologies provides technology and digital solutions for growing UK businesses through website development, merchant account management, AI automation and digital marketing. We are UK-based and partnered with Ank Square in India.
+              Digital marketing helps people discover and understand your business online. We help UK small and medium-sized businesses, startups and e-commerce companies improve visibility, connect with relevant audiences and generate enquiries.
             </motion.p>
             <motion.div
               className={styles.actions}
@@ -56,15 +54,15 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <Button href="/services" variant="primary" size="lg" icon>
-                Explore Our Services
+              <Button href="/services/digital-marketing" variant="primary" size="lg" icon>
+                Get a Quote
               </Button>
               <Button
+                href="/contact"
                 variant="outline"
                 size="lg"
-                onClick={() => openEnquiryModal()}
               >
-                Book a Free Consultation
+                Contact Us
               </Button>
             </motion.div>
 
@@ -76,18 +74,18 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.7 }}
             >
               <div className={styles.metricItem}>
-                <span className={styles.metricNum}>UK & India</span>
-                <span className={styles.metricLabel}>Strategic Bilateral Delivery</span>
+                <span className={styles.metricNum}>UK Focus</span>
+                <span className={styles.metricLabel}>Digital Marketing Services</span>
               </div>
               <div className={styles.metricDivider} />
               <div className={styles.metricItem}>
-                <span className={styles.metricNum}>4 Pillars</span>
-                <span className={styles.metricLabel}>Web, Merchant, AI & Growth</span>
+                <span className={styles.metricNum}>9 Capabilities</span>
+                <span className={styles.metricLabel}>One Integrated Marketing Strategy</span>
               </div>
               <div className={styles.metricDivider} />
               <div className={styles.metricItem}>
-                <span className={styles.metricNum}>Enterprise</span>
-                <span className={styles.metricLabel}>Engineering & Governance</span>
+                <span className={styles.metricNum}>Data-Led</span>
+                <span className={styles.metricLabel}>Strategy & Reporting</span>
               </div>
             </motion.div>
           </div>

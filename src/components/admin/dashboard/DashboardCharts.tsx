@@ -50,14 +50,10 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
         { name: 'Confirmed', value: 1 },
       ];
 
-  const displayServices = serviceDistribution.filter(s => s.value > 0).length > 0
-    ? serviceDistribution.filter(s => s.value > 0)
-    : [
-        { name: 'Web Dev', value: 0 },
-        { name: 'Merchant', value: 0 },
-        { name: 'AI Auto', value: 0 },
-        { name: 'Digital Mkt', value: 0 },
-      ];
+  const digitalMarketingEnquiries =
+    serviceDistribution.find((service) => service.name.toLowerCase() === 'digital marketing')
+      ?.value ?? 0;
+  const displayServices = [{ name: 'Digital Marketing', value: digitalMarketingEnquiries }];
 
   return (
     <div className={styles.chartsGrid}>
@@ -172,8 +168,8 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
       <div className={styles.chartCardLarge}>
         <div className={styles.chartHeader}>
           <div>
-            <h3 className={styles.chartTitle}>Service Demand Distribution</h3>
-            <p className={styles.chartSubtitle}>Client inquiries partitioned by core service vertical</p>
+            <h3 className={styles.chartTitle}>Digital Marketing Enquiries</h3>
+            <p className={styles.chartSubtitle}>Enquiries for the current service</p>
           </div>
         </div>
         <div className={styles.chartBody}>
@@ -214,4 +210,3 @@ export const DashboardCharts: React.FC<DashboardChartsProps> = ({
     </div>
   );
 };
-

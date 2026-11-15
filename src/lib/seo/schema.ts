@@ -3,7 +3,7 @@ import { SEO_CONFIG } from './config';
 export function getOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': ['Organization', 'ProfessionalService'],
+    '@type': 'Organization',
     '@id': SEO_CONFIG.organizationId,
     name: SEO_CONFIG.siteName,
     legalName: SEO_CONFIG.legalName,
@@ -17,9 +17,6 @@ export function getOrganizationSchema() {
     description: SEO_CONFIG.defaultDescription,
     email: SEO_CONFIG.contact.uk.email,
     telephone: SEO_CONFIG.contact.uk.phone,
-    priceRange: '££',
-    currenciesAccepted: 'GBP, USD, EUR, INR',
-    paymentAccepted: 'Bank Transfer, Stripe, Credit Card',
     address: {
       '@type': 'PostalAddress',
       streetAddress: SEO_CONFIG.contact.uk.addressLines[0],
@@ -27,11 +24,6 @@ export function getOrganizationSchema() {
       addressRegion: SEO_CONFIG.contact.uk.region,
       postalCode: SEO_CONFIG.contact.uk.postalCode,
       addressCountry: SEO_CONFIG.contact.uk.countryCode,
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: SEO_CONFIG.contact.uk.geo.latitude,
-      longitude: SEO_CONFIG.contact.uk.geo.longitude,
     },
     areaServed: [
       {
@@ -46,23 +38,20 @@ export function getOrganizationSchema() {
         '@type': 'AdministrativeArea',
         name: 'England',
       },
-      {
-        '@type': 'Country',
-        name: 'India',
-      },
     ],
     knowsAbout: [
-      'Website Development',
-      'Next.js Full-Stack Engineering',
-      'AI Automation & Intelligent Workflows',
-      'Merchant Account Operations',
-      'Digital Marketing & Search Engine Optimisation (SEO)',
+      'Digital Marketing',
+      'Search Engine Optimisation (SEO)',
       'Generative Engine Optimisation (GEO)',
       'Answer Engine Optimisation (AEO)',
-      'B2B Organic Lead Generation UK',
-      'High-Intent Client Acquisition Architecture',
+      'Social Media Marketing',
+      'Google Ads and Paid Advertising',
+      'Content Marketing',
+      'Email Marketing',
+      'Lead Generation',
+      'Marketing Analytics and Reporting',
     ],
-    sameAs: SEO_CONFIG.socialLinks,
+    sameAs: [SEO_CONFIG.mainSiteUrl, ...SEO_CONFIG.socialLinks],
   };
 }
 
@@ -74,6 +63,35 @@ export function getWebSiteSchema() {
     url: SEO_CONFIG.siteUrl,
     name: SEO_CONFIG.siteName,
     description: SEO_CONFIG.defaultDescription,
+    publisher: {
+      '@id': SEO_CONFIG.organizationId,
+    },
+    inLanguage: SEO_CONFIG.language,
+  };
+}
+
+export function getWebPageSchema({
+  name,
+  description,
+  url,
+}: {
+  name: string;
+  description: string;
+  url: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    name,
+    description,
+    url,
+    isPartOf: {
+      '@id': SEO_CONFIG.websiteId,
+    },
+    about: {
+      '@id': SEO_CONFIG.organizationId,
+    },
     publisher: {
       '@id': SEO_CONFIG.organizationId,
     },
@@ -106,10 +124,6 @@ export function getServiceSchema({
     {
       '@type': 'AdministrativeArea',
       name: 'England',
-    },
-    {
-      '@type': 'Country',
-      name: 'India',
     },
   ];
 
@@ -224,7 +238,7 @@ export function getBlogIndexSchema(posts: Array<{ title: string; url: string; da
     '@id': `${SEO_CONFIG.siteUrl}/blog#collection`,
     url: `${SEO_CONFIG.siteUrl}/blog`,
     name: 'Grace Technologies Insights & Thought Leadership',
-    description: 'Expert publications on UK website development, enterprise AI automation, answer engine optimization (AEO), generative engine optimization (GEO), and merchant operations.',
+    description: 'Insights on digital marketing for UK businesses, including search engine optimization (SEO), generative engine optimization (GEO), answer engine optimization (AEO), content and lead generation.',
     publisher: {
       '@id': SEO_CONFIG.organizationId,
     },
@@ -238,4 +252,3 @@ export function getBlogIndexSchema(posts: Array<{ title: string; url: string; da
     })),
   };
 }
-

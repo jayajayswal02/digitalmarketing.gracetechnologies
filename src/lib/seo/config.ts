@@ -1,24 +1,25 @@
 /**
  * Central SEO Configuration for Grace Technologies
- * Primary canonical domain: https://www.gracetechnologies.uk
+ * Primary canonical domain: https://digitalmarketing.gracetechnologies.uk
  */
 
 export const SEO_CONFIG = {
   siteName: 'Grace Technologies',
   legalName: 'Grace Technologies',
-  siteUrl: 'https://www.gracetechnologies.uk',
+  siteUrl: 'https://digitalmarketing.gracetechnologies.uk',
+  mainSiteUrl: 'https://www.gracetechnologies.uk',
   appleTouchIcon: '/apple-touch-icon.png',
-  defaultTitle: 'Grace Technologies | Digital & Technology Solutions',
+  defaultTitle: 'Digital Marketing Services UK | Grace Technologies',
   titleTemplate: '%s | Grace Technologies',
   defaultDescription:
-    'A UK-led technology partner offering website development, merchant account management, AI automation & digital marketing solutions for growing businesses.',
-  defaultOgImage: 'https://www.gracetechnologies.uk/logo/logo.png',
+    'Grace Technologies provides digital marketing services for UK businesses, helping improve online visibility, reach targeted audiences and generate quality leads.',
+  defaultOgImage: 'https://digitalmarketing.gracetechnologies.uk/logo/logo.png',
   locale: 'en_GB',
-  inLocale: 'en_IN',
+  inLocale: 'en_GB',
   language: 'en',
   themeColor: '#030712',
-  organizationId: 'https://www.gracetechnologies.uk/#organization',
-  websiteId: 'https://www.gracetechnologies.uk/#website',
+  organizationId: 'https://digitalmarketing.gracetechnologies.uk/#organization',
+  websiteId: 'https://digitalmarketing.gracetechnologies.uk/#website',
   contact: {
     uk: {
       company: 'Grace Technologies',
@@ -33,7 +34,7 @@ export const SEO_CONFIG = {
       region: 'Greater London',
       countryCode: 'GB',
       email: 'contact@gracetechnologies.uk',
-      phone: '+44 7407 268125',
+      phone: '+44 7440007332',
       geo: {
         latitude: 51.576,
         longitude: 0.148,
@@ -60,36 +61,14 @@ export const SEO_CONFIG = {
     'https://www.facebook.com/share/1CKuqfF3Ef/',
     'https://www.youtube.com/@Gracetechnologiesofficial',
     'https://x.com/grace_Official4',
-    'https://www.linkedin.com/',
   ],
   services: [
     {
-      id: 'website-development',
-      name: 'Website Development',
-      url: 'https://www.gracetechnologies.uk/services/website-development',
-      description:
-        'Custom business websites, Next.js web applications, e-commerce architectures, and technical performance engineering.',
-    },
-    {
-      id: 'merchant-account-management',
-      name: 'Merchant Account Management',
-      url: 'https://www.gracetechnologies.uk/services/merchant-account-management',
-      description:
-        'Professional merchant onboarding assistance, multi-currency payment operations support, and gateway integrations.',
-    },
-    {
-      id: 'ai-automation',
-      name: 'AI Automation',
-      url: 'https://www.gracetechnologies.uk/services/ai-automation',
-      description:
-        'Intelligent business process automation, autonomous agentic workflows, CRM integrations, and predictive pipelines.',
-    },
-    {
       id: 'digital-marketing',
-      name: 'Digital Marketing & SEO',
-      url: 'https://www.gracetechnologies.uk/services/digital-marketing',
+      name: 'Digital Marketing',
+      url: 'https://digitalmarketing.gracetechnologies.uk/services/digital-marketing',
       description:
-        'Data-driven organic search engine optimisation (SEO), Generative Engine Optimisation (GEO), and omnichannel ad campaigns.',
+        'Digital marketing services for UK businesses, including SEO, GEO, AEO, social media marketing, Google Ads and paid advertising, content marketing, email marketing, lead generation, and marketing analytics and reporting.',
     },
   ],
 } as const;

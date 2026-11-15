@@ -41,9 +41,6 @@ interface EnquiryStats {
 
 const SERVICES = [
   'All Services',
-  'Website Development',
-  'Merchant Account Management',
-  'AI Automation',
   'Digital Marketing',
 ];
 

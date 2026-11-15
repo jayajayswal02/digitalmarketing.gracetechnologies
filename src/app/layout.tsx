@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     template: SEO_CONFIG.titleTemplate,
   },
   description: SEO_CONFIG.defaultDescription,
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION || '',
-  },
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
   icons: {
     apple: SEO_CONFIG.appleTouchIcon,
   },
@@ -35,9 +35,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: SEO_CONFIG.defaultOgImage,
-        width: 1200,
-        height: 630,
-        alt: `${SEO_CONFIG.siteName} - British Corporate Excellence & Intelligent Technology`,
+        alt: `${SEO_CONFIG.siteName} - Digital Marketing Services UK`,
       },
     ],
   },

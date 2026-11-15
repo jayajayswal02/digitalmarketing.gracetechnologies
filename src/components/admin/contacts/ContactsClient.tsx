@@ -44,9 +44,6 @@ interface ContactStats {
 
 const SERVICES = [
   'All Services',
-  'Website Development',
-  'Merchant Account Management',
-  'AI Automation',
   'Digital Marketing',
 ];
 
@@ -499,4 +496,3 @@ export default function ContactsClient() {
     </div>
   );
 }
-

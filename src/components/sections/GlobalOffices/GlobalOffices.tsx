@@ -8,8 +8,6 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import PublicIcon from '@mui/icons-material/Public';
-import LanguageIcon from '@mui/icons-material/Language';
-import HubIcon from '@mui/icons-material/Hub';
 import officesData from '@/config/offices.json';
 import styles from './GlobalOffices.module.css';
 
@@ -23,7 +21,7 @@ export default function GlobalOffices() {
         <SectionHeading
           label="BILATERAL GEOGRAPHIC FOOTPRINT"
           title="Global Presence. Local Leadership."
-          description="Operating across key international hubs, connecting United Kingdom corporate strategy with Indian technology implementation."
+          description="Based in the United Kingdom, Grace Technologies works with its India partner on agreed digital marketing activity."
           align="center"
         />
 
@@ -173,7 +171,7 @@ export default function GlobalOffices() {
             </div>
           </div>
 
-          {/* RIGHT: India Engineering Delivery Hub Card */}
+          {/* RIGHT: India Partner Office Card */}
           <motion.div
             className={`${styles.officeCard} ${activeLocation === 'india' || activeLocation === 'both' ? styles.cardHighlighted : ''}`}
             onMouseEnter={() => setActiveLocation('india')}

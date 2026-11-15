@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Container from '@/components/common/Container/Container';
-import SectionHeading from '@/components/common/SectionHeading/SectionHeading';
 import ContactForm from '@/components/sections/ContactForm/ContactForm';
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
@@ -23,10 +22,10 @@ export default function HomeContactSection() {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7 }}
           >
-            <span className={styles.badge}>EXECUTIVE CONSULTATION</span>
+            <span className={styles.badge}>DIGITAL MARKETING ENQUIRIES</span>
             <h2 className={styles.heading}>Contact Us</h2>
             <p className={styles.subheading}>
-              Whether you need scalable Next.js engineering, merchant account advisory, AI automation pipelines, or data-driven digital growth, our senior team is ready to assist.
+              Tell us about your audience and business goals. Our team is ready to discuss a practical digital marketing approach.
             </p>
 
             <div className={styles.benefitsList}>
@@ -35,8 +34,8 @@ export default function HomeContactSection() {
                   <CheckCircleIcon fontSize="small" />
                 </div>
                 <div>
-                  <p className={styles.benefitTitle}>Direct Senior Leadership Access</p>
-                  <p className={styles.benefitDesc}>Consult directly with strategic advisors based in the UK.</p>
+                  <p className={styles.benefitTitle}>UK-Based Contact</p>
+                  <p className={styles.benefitDesc}>Discuss your business goals with the Grace Technologies team.</p>
                 </div>
               </div>
 
@@ -45,8 +44,8 @@ export default function HomeContactSection() {
                   <SecurityOutlinedIcon fontSize="small" />
                 </div>
                 <div>
-                  <p className={styles.benefitTitle}>Confidentiality & Rigour</p>
-                  <p className={styles.benefitDesc}>Commercial NDA protection and strict adherence to UK GDPR standards.</p>
+                  <p className={styles.benefitTitle}>Privacy Matters</p>
+                  <p className={styles.benefitDesc}>We handle enquiries in line with our privacy policy.</p>
                 </div>
               </div>
 
@@ -55,9 +54,8 @@ export default function HomeContactSection() {
                   <EmailOutlinedIcon fontSize="small" />
                 </div>
                 <div>
-                  <p className={styles.benefitTitle}>Prompt Technical Evaluation</p>
-                  <p className={styles.benefitDesc}>Receive a comprehensive response and feasibility review within 24
-                    business hours.</p>
+                  <p className={styles.benefitTitle}>Clear Next Steps</p>
+                  <p className={styles.benefitDesc}>We will review your enquiry and discuss a suitable next step.</p>
                 </div>
               </div>
             </div>

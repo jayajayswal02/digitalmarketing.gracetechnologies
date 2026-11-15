@@ -15,13 +15,13 @@ interface ServiceCTASectionProps {
 }
 
 export default function ServiceCTASection({
-  title = 'Ready to Transform Your Digital Infrastructure?',
-  description = 'Speak with our strategic consulting team in the UK and discover how our collaborative approach accelerates delivery.',
-  primaryCtaText = 'Discuss Your Project',
+  title = 'Ready to Grow Your Business?',
+  description = 'Tell us about your goals and we will discuss how our digital marketing services may help.',
+  primaryCtaText = 'Get a Quote',
   serviceTitle,
-  secondaryCtaText = 'Explore Case Studies',
-  secondaryCtaHref = '/projects',
-  badge = 'ELEVATE YOUR BUSINESS',
+  secondaryCtaText = 'Contact Us',
+  secondaryCtaHref = '/contact',
+  badge = 'DIGITAL MARKETING',
 }: ServiceCTASectionProps) {
   return (
     <CTASection
@@ -35,4 +35,3 @@ export default function ServiceCTASection({
     />
   );
 }
-

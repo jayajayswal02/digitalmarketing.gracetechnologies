@@ -8,21 +8,21 @@ import styles from './BlogLanding.module.css';
 
 const FILTERS = [
   'All',
-  'Website Development',
-  'AI Automation',
-  'Merchant Account Management',
   'SEO',
-  'Digital Growth',
-  'Performance',
+  'Content Marketing',
+  'Social Media Marketing',
+  'Paid Advertising',
+  'Lead Generation',
+  'Digital Marketing',
 ];
 
 function getCategoryValue(post: (typeof BLOG_POSTS)[number]) {
-  if (post.tags.some((tag) => tag.toLowerCase().includes('website'))) return 'Website Development';
-  if (post.tags.some((tag) => tag.toLowerCase().includes('ai'))) return 'AI Automation';
-  if (post.tags.some((tag) => tag.toLowerCase().includes('merchant'))) return 'Merchant Account Management';
   if (post.tags.some((tag) => tag.toLowerCase().includes('seo'))) return 'SEO';
-  if (post.tags.some((tag) => tag.toLowerCase().includes('performance'))) return 'Performance';
-  return 'Digital Growth';
+  if (post.tags.some((tag) => tag.toLowerCase().includes('content'))) return 'Content Marketing';
+  if (post.tags.some((tag) => tag.toLowerCase().includes('social'))) return 'Social Media Marketing';
+  if (post.tags.some((tag) => tag.toLowerCase().includes('paid'))) return 'Paid Advertising';
+  if (post.tags.some((tag) => tag.toLowerCase().includes('lead'))) return 'Lead Generation';
+  return 'Digital Marketing';
 }
 
 export default function BlogLanding() {
@@ -42,9 +42,9 @@ export default function BlogLanding() {
         <header className={styles.hero}>
           <div className={styles.heroCopy}>
             <span className={styles.eyebrow}>Insights, Strategy & Thought Leadership</span>
-            <h1>Technical Intelligence for Modern Enterprise Growth.</h1>
+            <h1>Digital Marketing Insights for Business Growth.</h1>
             <p>
-              In-depth strategic analyses, architectural blueprints, and actionable intelligence covering Next.js website engineering, Answer Engine Optimisation (AEO), Generative Engine Optimisation (GEO), enterprise AI automation, and merchant payment infrastructure for UK & global enterprises.
+              Practical insights on search visibility, content, paid campaigns, social media and lead generation for UK businesses.
             </p>
 
             <div className={styles.filterBar} aria-label="Blog categories">
@@ -101,7 +101,7 @@ export default function BlogLanding() {
           <div className={styles.sectionHeader}>
             <div>
               <span className={styles.sectionLabel}>Knowledge Base & Topical Hub</span>
-              <h2>Authoritative Guides for Enterprise Leaders & Engineers</h2>
+              <h2>Digital Marketing Guides for Business Leaders</h2>
             </div>
             <span className={styles.resultCount}>{filteredPosts.length} articles</span>
           </div>
